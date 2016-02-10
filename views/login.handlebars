@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!--script src="js/appName.js"></script-->
+    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<title>SuperSavr</title>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="js/login-show.js"></script>
+
+</head>
+    
+<body>
+        <nav class="navbar navbar-default navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="nav-header">
+                     <a class="navbar-brand" href="#" id="appLogo">SuperSavr</a>
+                    </div>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="views/main.html">Profile</a></li>
+                        <li><a href="views/main.html">Settings</a></li>
+                        <li><a href="views/main.html">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+    
+    
+        <div class="col-xs-12">
+        <div class="options">
+            <center>
+                <div class="col-xs-12">
+                    
+                    <ul class="nav nav-tabs" style="margin-bottom:20px;">
+                        <li class="active"><a href="#login" data-toggle="tab"><h5>Login</h5></a></li>
+                        <li><a href="#signup" data-toggle="tab"><h5>Sign Up</h5></a></li>
+                    </ul>
+                    
+                    <div class="tab-content">   
+                        <div id="signup" class="tab-pane fade">
+                            <form method="get" action="/signup">
+                                <div align="left"><p style="line-height: 0.1"><b>Choose your username*</b></p></div> 
+                                <input type="text" class="form-control" aria-describedby="sizing-addon2" style="margin-bottom:20px" id="username" name="username" required>
+                                <div align="left"><p style="line-height: 0.1"><b>Create a password*</b></p></div> 
+                                <input type="password" class="form-control" aria-describedby="sizing-addon2" style="margin-bottom:20px" id="password" name="password" required>
+                                
+                                <div align="left"><p style="line-height: 0.1"><b>Confirm your password*</b></p></div> 
+                                <input type="password" class="form-control" aria-describedby="sizing-addon2" style="margin-bottom:5px" id="confirm_password" name="confirm_password" onkeyup="checkPass(); return false;" required>
+                                
+                                <div align="left" style="margin-bottom:20px"><span id="confirmMessage" class="confirmMessage"></span></div>
+                                            
+                                
+                                <div align="left"><p style="line-height: 0.1"><b>What is your cash goal?</b></p></div> 
+                                <input type="text" class="form-control" aria-describedby="sizing-addon2" placeholder="$$$" style="margin-bottom:10px" id="goal" name="goal" required>                          
+                                <input type="submit" value="Submit" class="btn btn-primary btn-lg btn-block">
+                                
+                            </form>
+                        </div>
+               
+                        
+                        
+                        
+                        <div id="login" class="tab-pane fade in active">
+                            <form method="get" action="/index">
+                                <div align="left"><p style="line-height: 0.1"><b>Username*</b></p></div>
+                                <input type="text" class="form-control" aria-describedby="sizing-addon2" style="margin-bottom:3px" id="username" name="username">
+                                <div align="left" style="color:red; margin-bottom:20px"><p>{{noSuchUser}}</p></div>
+                                
+                                <div align="left"><p style="line-height: 0.1"><b>Password*</b></p></div> 
+                                <input type="password" class="form-control" aria-describedby="sizing-addon2" style="margin-bottom:3px" id="password" name="password">
+                                <div align="left" style="color:red; margin-bottom:20px"><p>{{wrongPassword}}</p></div>
+                                
+                                <input type="submit" value="Login" class="btn btn-primary btn-lg btn-block">
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+            </center>
+        </div>
+    
+</body>
+</html>
