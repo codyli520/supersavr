@@ -18,6 +18,7 @@ function initializePage() {
     });
 }
 
+
 function anagrammedName(name) {
 	// Thanks, Internet Anagram Server!
 	
