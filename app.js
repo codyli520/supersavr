@@ -6,12 +6,13 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var handlebars = require('express3-handlebars')
+var handlebars = require('express3-handlebars');
 
 var index = require('./routes/index');
 var goal = require('./routes/goal.js');
-var add = require('./routes/add.js')
-var addCategories = require('./routes/addCategories.js')
+var add = require('./routes/add.js');
+var addCategories = require('./routes/addCategories.js');
+var account = require('./routes/account.js');
 
 // Example route
 // var user = require('./routes/user');
@@ -39,10 +40,11 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/', index.view);
+app.get('/index', index.view);
 app.get('/goal',goal.view);
-app.get('/add',add.view)
+app.get('/add',add.view);
 app.get('/addCategories',addCategories.view);
+app.get('/account', account.view);
 
 // Example route
 // app.get('/users', user.list);
