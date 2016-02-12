@@ -1,0 +1,15 @@
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.padd{
+    padding-top: 20px;
+}
+
+
+.horizpadd{
+	padding-left:20px;
+	padding-right:20px;
+}
+
