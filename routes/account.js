@@ -1,5 +1,3 @@
-
-
 exports.view = function(req, res){
-	res.render('account', {"username": "Cody"});
+	res.render('account', {"username": username});
 };

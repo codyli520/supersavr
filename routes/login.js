@@ -12,7 +12,17 @@ exports.view = function(req, res){
             if(usrname == data["user"][i].username){
                 flag = 1;
                 if(password == data["user"][i].password){
+                    var amountNeeded = (parseInt(data["user"][i].goal)- parseInt(data["user"][i].saving)).toString()
+                    data["user"][i].needs = amountNeeded;
+                    
                     res.render('index', data["user"][i]);
+                    console.log(data);
+                    username = data["user"][i]["username"];
+                    password = data["user"][i]["password"];
+                    goal = data["user"][i]["goal"];
+                    saving = data["user"][i]["saving"];
+                    needs = (parseInt(goal) - parseInt(saving)).toString();
+                    console.log("Need " + amountNeeded);
                     return;
                 }
             }

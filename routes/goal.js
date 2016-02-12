@@ -1,7 +1,12 @@
 var data = require("../items.json");
 
 exports.view = function(req, res){  
-	res.render('goal', data);
+    data.goal= goal;
+    data.saving=saving;
+    data.percentage = (parseInt(saving)*100/parseInt(goal)).toString();
+    //user_json.concat(data); 
+    console.log(data);
+	res.render('goal', data );
 };
 
 exports.getItemDetail = function(req, res) {

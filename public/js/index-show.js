@@ -1,15 +1,27 @@
 $( document ).ready(function() {
     google.charts.load("current", {packages:["corechart"]});
     google.charts.setOnLoadCallback(drawChart);
+    console.log(parseInt(saving));
+    console.log(parseInt(needs));
 });
 
 
  function drawChart() {
-        var data = google.visualization.arrayToDataTable([
+        
+        var data = new google.visualization.DataTable();
+
+// Declare columns
+        data.addColumn('string', 'Type');
+        data.addColumn('number', 'Amount');
+        data.addRows([
+            ['Saving',Number(saving)],
+            ['Needs',Number(needs)]
+            ]);
+        /*var data = google.visualization.arrayToDataTable([
           ['Goal', 'Saving'],
           ['Saving',  473],
           ['Goal',   27]
-        ]);
+        ]);*/
 
         var options = {
             pieHole: 0.4,
