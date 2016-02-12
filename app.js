@@ -46,15 +46,12 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/index', index.view);
 app.get('/goal',goal.view);
-<<<<<<< HEAD
 app.get('/',login.view);
 app.get('/login',login.view);
 app.get('/signup',signup.view);
-=======
 app.get('/add',add.view);
 app.get('/addCategories',addCategories.view);
 app.get('/account', account.view);
->>>>>>> a08fad9ea06b2f1728030c588e9d537f6bedef92
 
 // Example route
 // app.get('/users', user.list);
