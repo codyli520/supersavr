@@ -1,11 +1,19 @@
 //'use strict';
 
 $( document ).ready(function() {  
-   
+   initializePage();
 });
 
-function addSaving(){
+function initializePage() {
+    $('#saving-btn').click(addSaving);
+
+    //$('#colorBtn').click(randomizeColors);
+}
+
+function addSaving(e){
+    e.preventDefault();
     var amount = isNaN(document.getElementById('inputAmount').value);
+
     $("#confirmAlert").addClass("hidden");
     $("#warningAlert").addClass("hidden");
     $("#successAlert").addClass("hidden");
@@ -15,7 +23,9 @@ function addSaving(){
         $("#confirmAlert").removeClass("hidden");
         $("#warningAlert").addClass("hidden");
         var realAmount = document.getElementById('inputAmount').value;
-        $(realAmount).text();
+
+
+        $("#confirmAlert strong").append("<strong>"+realAmount+"</strong>");
 
     }
     else{
