@@ -43,7 +43,7 @@ if ('development' == app.get('env')) {
 app.get('/index', index.view);
 app.get('/goal',goal.view);
 app.get('/',login.view);
-//app.get('/add',add.addUser);
+app.get('/login',login.view);
 app.get('/signup',signup.view);
 
 // Example route
