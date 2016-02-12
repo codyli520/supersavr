@@ -1,40 +1,55 @@
-//'use strict';
 
 $( document ).ready(function() {  
    initializePage();
 });
 
 function initializePage() {
-    $('#saving-btn').click(addSaving);
 
-    //$('#colorBtn').click(randomizeColors);
 }
 
-function addSaving(e){
-    e.preventDefault();
+function addSaving(){
+   
     var amount = isNaN(document.getElementById('inputAmount').value);
-
-    $("#confirmAlert").addClass("hidden");
-    $("#warningAlert").addClass("hidden");
-    $("#successAlert").addClass("hidden");
+    
+    //$("#confirmAlert").addClass("hidden");
+    //$("#warningAlert").addClass("hidden");
+    //$("#successAlert").addClass("hidden");
     if(!amount){
+        //alert("clicked");
         //alert('You have successfull added $'+document.getElementById('inputAmount').value+'.00');
-        //$("#confirm").toggleClass('hidden');
-        $("#confirmAlert").removeClass("hidden");
-        $("#warningAlert").addClass("hidden");
+        $("#confirmAlert").toggleClass('hidden');
+        //$("#confirmAlert").removeClass("hidden");
+        //$("#warningAlert").addClass("hidden");
         var realAmount = document.getElementById('inputAmount').value;
 
 
-        $("#confirmAlert strong").append("<strong>"+realAmount+"</strong>");
+        $("#confirmAlert strong").html("<strong>Confirm amount: $"+realAmount+".00</strong>");
+        
 
     }
     else{
         //alert('PLEASE, enter a numerical value');
         //$('').show();
-        $("#warningAlert").removeClass("hidden");
+        $("#warningAlert").toggleClass("hidden");
     }
 }
 
+function submit(name){
+    $("#confirmAlert").toggleClass('hidden');
+    /*var data = require("../../data.json");
+    var jsonData = JSON.parse(user);
+    alert(jsonData);
+    $.getJSON("data.json", function(data){
+        for (var i = 0; i < data["user"].length; i++) {
+            if(data["user"][i].username === name){
+                var temp = parseInt(data["user"][i].saving);
+                data["user"][i].saving = temp - $("#inputAmount").val();
+            }
+        }
+    });*/
+    
+    $("#inputAmount").val("");
+}
 
 
 

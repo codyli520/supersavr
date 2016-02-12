@@ -11,13 +11,16 @@
     <link href="css/add.css" rel="stylesheet">
     <!--script src="js/appName.js"></script-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->        
+    <script type="text/javascript">
+        var username = "";
+        var password = "";
+        var goal = "";
+        var saving = "";
+        var needs = "";
+    </script>
+    <!--script src="../data.json"></script-->
+    <script src="../routes/login.js"></script>
+            
 </head>
 
 <body>
@@ -67,7 +70,7 @@
                  <div class="input-group-addon">.00</div>
                  </div>
                  </div>
-                 <button type="button" class="btn btn-primary" id="saving-btn">Add Savings</button>
+                 <button type="button" class="btn btn-primary" id="saving-btn" onclick="addSaving()">Add Savings</button>
               </form>
 
               </center>
@@ -77,11 +80,11 @@
           <div class="row">
           <div id ="confirmAlert" class="alert alert-warning hidden">
       
-               <strong>Confirm amount: $</strong> 
+               <strong></strong> 
                <!--<div class="pull-right">-->
                  <p class="text-right">
                    <a class="btn btn-warning " href="#" role="button" data-dismiss="alert" aria-label="close">Cancel</a>
-                   <a class="btn btn-success" href="#" role="button" data-dismiss="alert" aria-label="close">Submit</a>
+                   <a class="btn btn-success" href="#" role="button" onclick='submit("{{username}}")'>Submit</a>
                  </p>
                <!--</div>-->
               
