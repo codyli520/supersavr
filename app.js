@@ -9,14 +9,14 @@ var path = require('path');
 var handlebars = require('express3-handlebars');
 
 var index = require('./routes/index');
-var goal = require('./routes/goal.js');
+var stats = require('./routes/stats');
 var login = require('./routes/login');
 //var add = require('./routes/add');
 var signup = require('./routes/signup');
-var add = require('./routes/add.js');
-var addCategories = require('./routes/addCategories.js');
-var account = require('./routes/account.js');
-
+var add = require('./routes/add');
+var addCategories = require('./routes/addCategories');
+var account = require('./routes/account');
+var goal = require('./routes/goal');
 
 // Example route
 // var user = require('./routes/user');
@@ -45,14 +45,15 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/index', index.view);
-app.get('/goal',goal.view);
+app.get('/stats',stats.view);
 app.get('/',login.view);
 app.get('/login',login.view);
 app.get('/signup',signup.view);
 app.get('/add',add.view);
 app.get('/addCategories',addCategories.view);
 app.get('/account', account.view);
-
+app.get('/goal', goal.view);
+app.get('/goal/:id', goal.getItemDetail);
 // Example route
 // app.get('/users', user.list);
 
