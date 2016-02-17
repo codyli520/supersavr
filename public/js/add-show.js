@@ -36,17 +36,17 @@ function addSaving(){
 
 function submit(name){
     $("#confirmAlert").toggleClass('hidden');
-    /*var data = require("../../data.json");
-    var jsonData = JSON.parse(user);
-    alert(jsonData);
-    $.getJSON("data.json", function(data){
-        for (var i = 0; i < data["user"].length; i++) {
-            if(data["user"][i].username === name){
-                var temp = parseInt(data["user"][i].saving);
-                data["user"][i].saving = temp - $("#inputAmount").val();
-            }
-        }
-    });*/
+    
+
+   $.getJSON("data.json", function(data){
+        alert(JSON.stringify(data["user"]));
+//       for (var i = 0; i < data["user"].length; i++) {
+//            if(data["user"][i].username === name){
+//                var temp = parseInt(data["user"][i].saving);
+//                data["user"][i].saving = temp - $("#inputAmount").val();
+//            }
+//        }
+    });
     
     $("#inputAmount").val("");
 }

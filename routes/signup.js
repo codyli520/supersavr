@@ -1,4 +1,4 @@
-var data = require("../data.json");
+var data = require("../public/data.json");
 exports.view = function(req, res){  
 	// Your code goes here
     var newUser = {"username": req.query.username, "password": req.query.password, "goal": req.query.goal, "saving" : "0"}

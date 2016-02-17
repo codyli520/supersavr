@@ -1,4 +1,4 @@
-var data = require("../items.json");
+var data = require("../public/items.json");
 
 exports.view = function(req, res){  
     data.goal= goal;
