@@ -1,4 +1,4 @@
-var data = require("../data.json");
+var data = require("../public/data.json");
 exports.view = function(req, res){
    /* for (var i = 0; i < data["user"].length; i++) {
         if(username == data["user"][i].username){
