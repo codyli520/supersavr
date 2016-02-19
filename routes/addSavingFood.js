@@ -1,5 +1,5 @@
 var data = require("../public/data.json");
-
+var history = require("../public/history.json");
 exports.view = function(req, res){
     
     var input = req.query.inputAmount;
@@ -11,7 +11,18 @@ exports.view = function(req, res){
             data["user"][i].saving = resultSaving;   
             data["user"][i].needs = resultNeeds;  
         }
-    }    
+    }  
+    
+     for (var i = 0; i < history["savings"].length; i++) {
+        if(username == history["savings"][i].username){
+            var currentdate = new Date(); 
+            var date = currentdate.getFullYear() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getDate();
+            var newRecord = {"date":date,"category":"food","amount": input};
+            history["savings"][i]["history"].push(newRecord);
+        }
+      }
     res.render('addFood');
 
 };

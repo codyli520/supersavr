@@ -23,7 +23,7 @@ var goal = require('./routes/goal');
 var help = require('./routes/help');
 var setting = require('./routes/setting');
 
-
+var addItem = require('./routes/addItem');
 
 
 var addSavingGrocery = require('./routes/addSavingGrocery');
@@ -72,7 +72,7 @@ app.get('/goal/:id', goal.getItemDetail);
 app.get('/help', help.view);
 app.get('/setting', setting.view);
 
-
+app.get('/addItem',addItem.addItem);
 
 app.get('/addSavingGrocery', addSavingGrocery.view);
 app.get('/addSavingCloth', addSavingCloth.view);
@@ -84,3 +84,4 @@ app.get('/addSavingOther', addSavingOther.view);
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+

@@ -39,4 +39,4 @@ exports.getItemDetail = function(req, res) {
     }
   	
 }
-        
+  
