@@ -36,6 +36,6 @@ function addItem(result){
 }
 
 function deleteItem(id){
-    $("#"+id).remove();
+    $("#"+id).addClass("hidden");
 }
     

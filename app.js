@@ -13,7 +13,7 @@ var stats = require('./routes/stats');
 var login = require('./routes/login');
 //var add = require('./routes/add');
 var signup = require('./routes/signup');
-var add = require('./routes/add');
+var addGrocery = require('./routes/addGrocery');
 var addClothes = require('./routes/addClothes');
 var addFood = require('./routes/addFood');
 var addOthers = require('./routes/addOthers');
@@ -23,12 +23,13 @@ var goal = require('./routes/goal');
 var help = require('./routes/help');
 var setting = require('./routes/setting');
 
+var addItem = require('./routes/addItem');
 
 
-
-var addSaving = require('./routes/addSaving');
-
-
+var addSavingGrocery = require('./routes/addSavingGrocery');
+var addSavingCloth = require('./routes/addSavingCloth');
+var addSavingFood = require('./routes/addSavingFood');
+var addSavingOther = require('./routes/addSavingOther');
 
 // Example route
 // var user = require('./routes/user');
@@ -60,7 +61,7 @@ app.get('/stats',stats.view);
 app.get('/',login.view);
 app.get('/login',login.view);
 app.get('/signup',signup.view);
-app.get('/add',add.view);
+app.get('/addGrocery',addGrocery.view);
 app.get('/addClothes', addClothes.view);
 app.get('/addFood', addFood.view);
 app.get('/addOthers',addOthers.view);
@@ -71,14 +72,16 @@ app.get('/goal/:id', goal.getItemDetail);
 app.get('/help', help.view);
 app.get('/setting', setting.view);
 
+app.get('/addItem',addItem.addItem);
 
-
-app.get('/addSaving', addSaving.view);
-
-
+app.get('/addSavingGrocery', addSavingGrocery.view);
+app.get('/addSavingCloth', addSavingCloth.view);
+app.get('/addSavingFood', addSavingFood.view);
+app.get('/addSavingOther', addSavingOther.view);
 // Example route
 // app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+

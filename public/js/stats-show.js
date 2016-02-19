@@ -1,18 +1,20 @@
 $( document ).ready(function() {  
     google.charts.load('current', {'packages':['corechart']});
     google.charts.setOnLoadCallback(drawChart);
-    
 });
   
 function drawChart() {
-    var data = google.visualization.arrayToDataTable([
-          ['Item', 'Dollars Saved'],
-          ['Groceries',     11],
-          ['Restaurants & Fast Food',      2],
-          ['Uber & Transit',  2],
-          ['Clothes', 2],
-          ['Misc',    7]
-    ]);
+    var data = new google.visualization.DataTable();
+        
+        data.addColumn('string', 'Type');
+        data.addColumn('number', 'Amount');
+        
+        data.addRows([
+            ['Food',Number(food)],
+            ['Grocery',Number(grocery)],
+            ['Cloth',Number(cloth)],
+            ['Other',Number(other)]
+            ]);
 
     var options = {
         title: 'Money Saved'
@@ -22,3 +24,4 @@ function drawChart() {
 
     chart.draw(data, options);
 }
+

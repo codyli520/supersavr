@@ -1,0 +1,29 @@
+{
+    "savings":[
+        {
+            "username": "Cody",
+            "history":[
+                {
+                    "date": "2016/02/10",
+                    "category":"food",
+                    "amount":"150"
+                },
+                {
+                    "date": "2016/02/14",
+                    "amount":"150",
+                    "category":"grocery" 
+                },
+                {
+                    "date": "2016/02/01",
+                    "amount":"50",
+                    "category":"cloth" 
+                },
+                {
+                    "date": "2016/02/02",
+                    "amount":"50",
+                    "category":"other" 
+                }
+            ]
+        }   
+    ]    
+}
