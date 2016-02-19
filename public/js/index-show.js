@@ -1,8 +1,6 @@
 $( document ).ready(function() {
     google.charts.load("current", {packages:["corechart"]});
     google.charts.setOnLoadCallback(drawChart);
-    console.log(parseInt(saving));
-    console.log(parseInt(needs));
 });
 
 
