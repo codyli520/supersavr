@@ -19,6 +19,14 @@ var account = require('./routes/account');
 var goal = require('./routes/goal');
 var help = require('./routes/help');
 var setting = require('./routes/setting');
+
+
+
+
+var addSaving = require('./routes/addSaving');
+
+
+
 // Example route
 // var user = require('./routes/user');
 
@@ -56,6 +64,12 @@ app.get('/goal', goal.view);
 app.get('/goal/:id', goal.getItemDetail);
 app.get('/help', help.view);
 app.get('/setting', setting.view);
+
+
+
+app.get('/addSaving', addSaving.view);
+
+
 // Example route
 // app.get('/users', user.list);
 

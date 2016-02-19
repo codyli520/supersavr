@@ -1,4 +1,3 @@
-
 $( document ).ready(function() {  
    initializePage();
 });
@@ -11,15 +10,14 @@ function addSaving(){
    
     var amount = isNaN(document.getElementById('inputAmount').value);
     
-    //$("#confirmAlert").addClass("hidden");
-    //$("#warningAlert").addClass("hidden");
-    //$("#successAlert").addClass("hidden");
-    if(!amount){
-        //alert("clicked");
-        //alert('You have successfull added $'+document.getElementById('inputAmount').value+'.00');
-        $("#confirmAlert").toggleClass('hidden');
+    
+    if(!amount && document.getElementById('inputAmount').value!= ""){
+        if( $("#confirmAlert").hasClass('hidden')){
+            $("#confirmAlert").removeClass('hidden');
+        }
+        
         //$("#confirmAlert").removeClass("hidden");
-        //$("#warningAlert").addClass("hidden");
+        $("#warningAlert").addClass("hidden");
         var realAmount = document.getElementById('inputAmount').value;
 
 
@@ -30,27 +28,21 @@ function addSaving(){
     else{
         //alert('PLEASE, enter a numerical value');
         //$('').show();
-        $("#warningAlert").toggleClass("hidden");
+        $("#confirmAlert").addClass("hidden");
+        if( $("#warningAlert").hasClass('hidden')){
+            $("#warningAlert").removeClass("hidden");
+        }
     }
 }
 
-function submit(name){
+function submitSaving(){
     $("#confirmAlert").toggleClass('hidden');
-    
-
-   $.getJSON("data.json", function(data){
-        alert(JSON.stringify(data["user"]));
-//       for (var i = 0; i < data["user"].length; i++) {
-//            if(data["user"][i].username === name){
-//                var temp = parseInt(data["user"][i].saving);
-//                data["user"][i].saving = temp - $("#inputAmount").val();
-//            }
-//        }
-    });
-    
     $("#inputAmount").val("");
 }
-
+ 
+function dismiss(){
+    $("#confirmAlert").addClass("hidden");
+}
 
 
 
