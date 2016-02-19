@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>Add Other Savings</title>	
+	<title>Add Grocery Savings</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
@@ -57,46 +57,44 @@
         </nav>
 
         <div class="col-xs-12">
+           <form method="get" action="/addSavingOther" id="savingsForm" class="form-inline">
           <div class = "show">
             <div class="addSavings">
               <center>
-              <h1>Other Savings</h1>
-              <form id = "savingsForm" class="form-inline">
+              <h1>Others</h1>
+                  
                  <div class="form-group">
                   <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
                  <div class="input-group">
                  <div class="input-group-addon">$</div>
-                 <input type="text" class="form-control" id="inputAmount" placeholder="Savings Amount">
+                 <input type="text" class="form-control" id="inputAmount" name="inputAmount" placeholder="Savings Amount">
                  <div class="input-group-addon">.00</div>
                  </div>
                  </div>
                  <button type="button" class="btn btn-primary" id="saving-btn" onclick="addSaving()">Add Savings</button>
-              </form>
+              
 
               </center>
             </div>
             </div>
           <hr>
           <div class="row">
-          <div id ="confirmAlert" class="alert alert-warning hidden">
-      
-               <strong></strong> 
-               <!--<div class="pull-right">-->
-                 <p class="text-right">
-                   <a class="btn btn-warning " href="#" role="button" data-dismiss="alert" aria-label="close">Cancel</a>
-                   <a class="btn btn-success" href="#" role="button" onclick='submit("{{username}}")'>Submit</a>
-                 </p>
-               <!--</div>-->
-              
+              <div id ="confirmAlert" class="alert alert-warning hidden">
+                  <strong></strong> 
+                  <p class="text-right">
+                      <button type="button" class="btn btn-warning " role="button" onclick="dismiss()">Cancel</button>
+                      <button type="submit" class="btn btn-success" href="#" role="button" >Submit</button> 
+                  </p>
+              </div>
           </div>
-          </div>
+              </form>
           <div id="successAlert" class="alert alert-success fade in hidden col-xs-12">
-            <strong> You added cash!</strong> Must add actual amount in update.
+            <strong> You added cash!</strong> 
           </div>
           <div id="warningAlert" class="alert alert-danger fade in hidden col-xs-12">
             <strong> Please enter a numerical amount.</strong>
           </div>
-        
+
         </div>
     
     <!--<script src="js/jquery-1.11.0.js"></script>

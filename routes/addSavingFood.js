@@ -12,6 +12,6 @@ exports.view = function(req, res){
             data["user"][i].needs = resultNeeds;  
         }
     }    
-    res.render('add');
+    res.render('addFood');
 
 };

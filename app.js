@@ -13,7 +13,7 @@ var stats = require('./routes/stats');
 var login = require('./routes/login');
 //var add = require('./routes/add');
 var signup = require('./routes/signup');
-var add = require('./routes/add');
+var addGrocery = require('./routes/addGrocery');
 var addClothes = require('./routes/addClothes');
 var addFood = require('./routes/addFood');
 var addOthers = require('./routes/addOthers');
@@ -26,9 +26,10 @@ var setting = require('./routes/setting');
 
 
 
-var addSaving = require('./routes/addSaving');
-
-
+var addSavingGrocery = require('./routes/addSavingGrocery');
+var addSavingCloth = require('./routes/addSavingCloth');
+var addSavingFood = require('./routes/addSavingFood');
+var addSavingOther = require('./routes/addSavingOther');
 
 // Example route
 // var user = require('./routes/user');
@@ -60,7 +61,7 @@ app.get('/stats',stats.view);
 app.get('/',login.view);
 app.get('/login',login.view);
 app.get('/signup',signup.view);
-app.get('/add',add.view);
+app.get('/addGrocery',addGrocery.view);
 app.get('/addClothes', addClothes.view);
 app.get('/addFood', addFood.view);
 app.get('/addOthers',addOthers.view);
@@ -73,9 +74,10 @@ app.get('/setting', setting.view);
 
 
 
-app.get('/addSaving', addSaving.view);
-
-
+app.get('/addSavingGrocery', addSavingGrocery.view);
+app.get('/addSavingCloth', addSavingCloth.view);
+app.get('/addSavingFood', addSavingFood.view);
+app.get('/addSavingOther', addSavingOther.view);
 // Example route
 // app.get('/users', user.list);
 
