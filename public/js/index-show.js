@@ -23,9 +23,14 @@ $( document ).ready(function() {
 
         var options = {
             pieHole: 0.4,
-            legend: {position: 'none'}
+            legend: {position: 'none'},
+            backgroundColor: '#FFF'
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+
+        if('color0'){
+          options.backgroundColor = sessionStorage.getItem('color0');
+        }
         chart.draw(data, options);
 }
