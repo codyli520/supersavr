@@ -24,3 +24,19 @@
      width: 5em;
     height: 2em;
 }
+
+.thumbnail img
+{
+
+}
+
+html {
+    height: 100%;
+}
+body {
+    /*height: 100%;
+    margin: 0;*/
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
