@@ -17,7 +17,8 @@ function drawChart() {
             ]);
 
     var options = {
-        title: 'Money Saved'
+        title: 'Money Saved',
+        legend: {position:'bottom'}
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));

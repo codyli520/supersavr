@@ -23,6 +23,6 @@ exports.view = function(req, res){
             history["savings"][i]["history"].push(newRecord);
         }
       }
-    res.render('addFood');
+    res.render('addFood', {'confirmationMessage' : "You have successfully added $" + input + "!"});
 
 };

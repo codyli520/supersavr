@@ -70,12 +70,13 @@
                  </div>
                  </div>
                  <button type="button" class="btn btn-primary" id="saving-btn" onclick="addSaving()">Add Savings</button>
+                  <hr>
+                  <p style="background-color:yellow;color:red;">{{confirmationMessage}}</p>
               
 
               </center>
             </div>
             </div>
-          <hr>
           <div class="row">
               <div id ="confirmAlert" class="alert alert-warning hidden">
                   <strong></strong> 
@@ -92,6 +93,15 @@
           <div id="warningAlert" class="alert alert-danger fade in hidden col-xs-12">
             <strong> Please enter a numerical amount.</strong>
           </div>
+            
+                        <center>
+            <button id="myButton" class="btn btn-primary" >Home</button>
+                </center>
+            <script type="text/javascript">
+                document.getElementById("myButton").onclick = function () {
+                    location.href = "/index";
+                };
+            </script>
 
         </div>
     
