@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    google.charts.load("current", {packages:["corechart"]});
+    google.charts.load("44", {packages:["corechart"]});
     google.charts.setOnLoadCallback(drawChart);
 });
 
@@ -23,7 +23,7 @@ $( document ).ready(function() {
 
         var options = {
             pieHole: 0.4,
-            legend: {position: 'none'},
+            legend: {position: 'bottom'},
             backgroundColor: '#FFF'
         };
 

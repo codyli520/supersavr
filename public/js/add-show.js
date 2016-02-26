@@ -9,8 +9,12 @@ function initializePage() {
 function addSaving(){
    
     var amount = isNaN(document.getElementById('inputAmount').value);
-    
-    
+    if( $(".addSavings p").hasClass('hidden')){
+        $(".addSavings p").removeClass("hidden");
+    }
+    else{
+        $(".addSavings p").addClass("hidden");
+    }
     if(!amount && document.getElementById('inputAmount').value!= ""){
         if( $("#confirmAlert").hasClass('hidden')){
             $("#confirmAlert").removeClass('hidden');

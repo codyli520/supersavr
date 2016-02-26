@@ -25,6 +25,6 @@ exports.view = function(req, res){
         }
       }
     
-    res.render('addOthers');
+    res.render('addOthers', {'confirmationMessage' : "You have successfully added $" + input + "!"});
 
 };

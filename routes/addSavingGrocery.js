@@ -22,6 +22,6 @@ exports.view = function(req, res){
             history["savings"][i]["history"].push(newRecord);
         }
       }
-    res.render('addGrocery');
+    res.render('addGrocery', {'confirmationMessage' : "You have successfully added $" + input + "!"});
 
 };
