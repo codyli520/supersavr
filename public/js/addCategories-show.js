@@ -8,8 +8,13 @@ $( document ).ready(function() {
         ga('send','timing','category', 'selected',time);
         ga('send','event','category','click');
     });
+
+   
 });
 
 function initializePage() {
  
 }
+
+
+

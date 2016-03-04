@@ -22,7 +22,7 @@ $(document).ready(function() {
 	if (clicked)
 	{
 		$('body').css({
-  'background' : '-webkit-linear-gradient(bottom left,' + bkgdColor + ', ' + blck + ') no-repeat',
+  'background' : '-webkit-linear-gradient(100deg,' + bkgdColor + ', ' + blck + ') no-repeat',
 
  // 'background' : '-moz-linear-gradient(left,' + rgba + ', ' + rgbaTwo + ')',
   //'background' : '-o-linear-gradient(left,' + rgba + ', ' + rgbaTwo + ')',
@@ -35,9 +35,10 @@ $(document).ready(function() {
 
 		//$('body').css('background-color', bkgdColor);
 		$('body').css('color', foreColor);
+
 		//$('.thumbnail').css('background-color', bkgdColor);
 $('.thumbnail').css({
-  'background' : '-webkit-linear-gradient(top,' + bkgdColor + ', ' + blck + ') no-repeat',
+  'background' : '-webkit-linear-gradient(bottom,' + bkgdColor + ', ' + blck + ') no-repeat',
 
  // 'background' : '-moz-linear-gradient(left,' + rgba + ', ' + rgbaTwo + ')',
   //'background' : '-o-linear-gradient(left,' + rgba + ', ' + rgbaTwo + ')',
