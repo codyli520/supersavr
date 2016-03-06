@@ -25,9 +25,23 @@
     height: 2em;
 }
 
-.thumbnail
-{
-  background: transparent;
+.thumbnail {
+   position: relative; 
+   height: 100%; /* for IE 6 */
+}
+
+.thumbnail input{
+    float: left;
+    max-width:100%;
+    max-height:100%;
+}
+
+.thumbnail h3 {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  font-size: 150px;
+  font-size: 15vw;
 }
 
 html {
