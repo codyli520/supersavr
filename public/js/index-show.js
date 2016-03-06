@@ -24,13 +24,13 @@ $( document ).ready(function() {
         var options = {
             pieHole: 0.4,
             legend: {position: 'bottom'},
-            backgroundColor: '#FFF'
+            backgroundColor: 'transparent'
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
 
-        if('color0'){
+        /*if('color0'){
           options.backgroundColor = sessionStorage.getItem('color0');
-        }
+        }*/
         chart.draw(data, options);
 }
