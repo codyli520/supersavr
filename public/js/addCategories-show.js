@@ -7,8 +7,13 @@ $( document ).ready(function() {
         var time = curTime - pageLoadTime;
         ga('send','timing','category', 'selected',time);
     });
+
+   
 });
 
 function initializePage() {
  
 }
+
+
+
