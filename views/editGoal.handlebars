@@ -1,0 +1,82 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Edit Goal</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="css/add.css" rel="stylesheet">
+    <!--script src="js/appName.js"></script-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]--> 
+    <script type="text/javascript">
+        var username = "";
+        var password = "";
+    </script>
+</head>
+
+<body>
+
+
+
+     <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    
+                    <div class="nav-header">
+                      <a class="navbar-brand">
+                        <form method="get" action="/index" style="display:inline-block;">
+                            <button type="submit" class="btn btn-sm white" style="margin-right: 5px">
+                        </form>
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        </button>  Edit Goal</a> 
+                    </div>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+  <div class="container">
+
+      <div class="row">
+  <div class="col-sm-12 text-center">
+
+    <h3>Current Goal: $ {{goal}}</h3>
+    <hr>
+    <h3>Edit your Goal</h3>
+  </div>
+</div>
+<div class="row top-buffer">
+  <div class="col-sm-6 col-sm-offset-3">
+    <form method="get" action="/editGoal" >
+     
+      <input type="text" class="input-lg form-control" name="newGoal" id="newGoal" placeholder="Enter New Goal" autocomplete="off">
+      
+      <input type="submit" class="col-xs-12 btn btn-primary btn-load btn-lg top-buffer" data-loading-text="Editing Goal..." value="Edit Goal">
+      
+    </form>
+
+</div><!--/col-sm-6-->
+</div><!--/row-->
+
+
+
+    
+      </div>   
+    <!--</div><!--row2-->
+
+<hr>
+
+  </div><!--container-->
+</body>
+</html>

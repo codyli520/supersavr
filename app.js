@@ -24,7 +24,7 @@ var help = require('./routes/help');
 var setting = require('./routes/setting');
 
 var addItem = require('./routes/addItem');
-
+var editGoal = require('./routes/editGoal');
 
 var addSavingGrocery = require('./routes/addSavingGrocery');
 var addSavingCloth = require('./routes/addSavingCloth');
@@ -83,6 +83,7 @@ app.get('/addSavingFood', addSavingFood.view);
 app.get('/addSavingOther', addSavingOther.view);
 
 app.get('/palette', palette.randomPalette);
+app.get('/editGoal',editGoal.view);
 // Example route
 // app.get('/users', user.list);
 

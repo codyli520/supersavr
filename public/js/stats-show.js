@@ -18,7 +18,9 @@ function drawChart() {
 
     var options = {
         title: 'Money Saved',
-        legend: {position:'bottom'}
+        titleTextStyle: { 'color': 'gray' },
+        legend: {position:'bottom', 'textStyle': { 'color': 'gray' } },
+        backgroundColor: 'transparent'
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));

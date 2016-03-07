@@ -23,7 +23,7 @@ $( document ).ready(function() {
 
         var options = {
             pieHole: 0.4,
-            legend: {position: 'bottom'},
+            legend: {position: 'bottom', 'textStyle': { 'color': 'gray' } },
             backgroundColor: 'transparent'
         };
 

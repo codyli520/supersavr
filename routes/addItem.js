@@ -7,6 +7,7 @@ exports.addItem= function(req, res) {
                 "id":(items["items"][i]["item"].length+1).toString(),
                 "name":req.query.name,
                 "price":req.query.price,
+                "imageURL": "http://i.imgur.com/8CUKIHi.jpg?1",
                 "url":"http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords="+req.query.name
             }
             items["items"][i]["item"].push(newItem);
