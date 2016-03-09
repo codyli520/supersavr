@@ -50,10 +50,13 @@ html {
 body {
     /*height: 100%;
     margin: 0;*/
-    background-size: 100% 100%;
+    /*background-size: 100% 100%;*/
+
     background-repeat: no-repeat;
     background-attachment: fixed;
     background: #CDD2D4;
+    overflow: auto;
+   
 }
 
 
@@ -111,3 +114,8 @@ hr.big{
 
 }
 
+hr.lines3 {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
