@@ -51,13 +51,15 @@ h3{
 	font-family: 'Oswald', sans-serif;
 }
 
-h1 {font-family: 'Helvetica Neue', sans-serif; font-weight: bold; text-align: center; }
+h1 {font-family: 'Oswald', sans-serif; font-weight: bold; text-align: center; }
 
 body{
 	background: #CDD2D4;
+   
+   
 }
 
-hr.lines{
+/*hr.lines{
 width: 24%;
 margin-bottom:0;
 
@@ -74,4 +76,17 @@ margin-left: auto;
 margin-right: auto;
 background-color:#f3f6db;
 color:#f3f6db;
+}*/
+
+hr.lines {
+    margin-bottom:0;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+hr.lines2 {
+    
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
 }

@@ -6,6 +6,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <link href="css/add.css" rel="stylesheet">
+
 <!--script src="js/appName.js"></script-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <title>CSE170</title>
@@ -56,9 +57,8 @@
         </nav>
 
         <div class="col-xs-12">
-            <div class="stats">
-            <div class="thumbnail"><center>
-            <h1>Goal Process</h1>
+            <div class="stats"><center>
+            <h1>Goal Process</h1></center><hr class="lines3">
                 <h5><b> Goal : ${{goal}}</b></h5>
                 <h5> <b>Current savings: ${{saving}} </b></h5>
                <div class="progress">
@@ -66,12 +66,10 @@
                     <span class="sr-only"></span>
                         {{percentage}}%
                     </div>
-                </div></div></center>
-
-                <div class="thumbnail">
+                </div><hr class="lines3">
                 <div class="wantedItems">
                     <center>
-                    <h1>Wish List</h1>
+                    <h1>Wish List</h1></center><hr class= "lines3">
                         {{#each item}}
                         <div class="panel panel-default" id="{{id}}">
                           <div class="item">
@@ -85,7 +83,6 @@
                         {{/each}}
                 
                 </div>
-
                 
                 <!--div class="col-sm-3 col-md-3 pull-right">
                     <h5>Search for more wanted items to add:</h5>
@@ -97,9 +94,9 @@
                         </div>
                     </div>
                     </form>
-                </div--><center>
+                </div-->
                 <form id="addFriendForm" role="form" method="get" action="/addItem">
-                    <h5><b>Add an Item to your Wish List:</b></h5>
+                    <h5><b>Add an Item to your Wish List</b></h5>
                     <div class="form-group">
                       <label for="name">Item Name:</label>
                       <input type="text" class="form-control" id="name" placeholder="Name" name="name">
@@ -110,9 +107,8 @@
                     </div>
                     <input type="submit" id="submitBtn" class="btn btn-default btn-lg" style="margin-top: 20px;" value="Add Item"></input>
                 </form>
-                </div>
             </div>
-        </div></center>
+        </div>
     <script src="js/goal-show.js"></script>
     <script src="js/color-show.js"></script>
 </body>

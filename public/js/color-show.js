@@ -23,8 +23,8 @@ $(document).ready(function() {
 	{
 		$('body').css({
   'background' : '-webkit-linear-gradient(100deg,' + bkgdColor + ', ' + blck + ') no-repeat',
-
- // 'background' : '-moz-linear-gradient(left,' + rgba + ', ' + rgbaTwo + ')',
+  
+  //'background' : '-moz-linear-gradient(100deg,' + bkgdColor + ', ' + blck + ')',
   //'background' : '-o-linear-gradient(left,' + rgba + ', ' + rgbaTwo + ')',
   //'background' : '-ms-linear-gradient(left,' + rgba + ', ' + rgbaTwo + ')',
   //'background' : 'linear-gradient(to right,' + rgba + ', ' + rgbaTwo + ')'
@@ -35,7 +35,7 @@ $(document).ready(function() {
 
 		//$('body').css('background-color', bkgdColor);
 		$('body').css('color', foreColor);
-
+    $('html').css('background-color', 'transparent');
 		//$('.thumbnail').css('background-color', bkgdColor);
 $('.thumbnail').css({
   'background' : '-webkit-linear-gradient(bottom,' + bkgdColor + ', ' + blck + ') no-repeat',
