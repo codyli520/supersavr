@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link href="css/add.css" rel="stylesheet">
-    <!--script src="js/appName.js"></script-->
+    <script src="js/goal-show.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -34,7 +34,7 @@
                     
                     <div class="nav-header">
                       <a class="navbar-brand">
-                        <form method="get" action="/index" style="display:inline-block;">
+                        <form method="get" action="/goal" style="display:inline-block;">
                             <button type="submit" class="btn btn-sm white" style="margin-right: 5px">
                         </form>
                         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -60,7 +60,7 @@
   <div class="col-sm-6 col-sm-offset-3">
     <form method="get" action="/editGoal" >
      
-      <input type="text" class="input-lg form-control" name="newGoal" id="newGoal" placeholder="Enter New Goal" autocomplete="off">
+      <input type="text" class="input-lg form-control" name="newGoal" id="newGoal" placeholder="Enter New Goal" autocomplete="off" onkeypress='validate(event)'required>
       
       <input type="submit" class="col-xs-12 btn btn-primary btn-load btn-lg top-buffer" data-loading-text="Editing Goal..." value="Edit Goal">
       
