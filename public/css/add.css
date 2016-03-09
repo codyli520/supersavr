@@ -93,3 +93,21 @@ hr.big{
   color: #9E9E9E;
   background-color: #121212;
 }
+
+.box-shadow--16dp {
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2)
+}
+
+#editbtn{
+    color: #FFF;
+    border-color: #424242;
+    background: -moz-linear-gradient(top,  #424242 50%, #212121 50%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#424242), color-stop(50%,#212121)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #424242 50%,#212121 50%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #424242 50%,#212121 50%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #424242 50%,#212121 50%); /* IE10+ */
+    background: linear-gradient(to bottom,  #424242 50%,#212121 50%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424242', endColorstr='#212121',GradientType=0 ); /* IE6-9 */	
+
+}
+

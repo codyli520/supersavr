@@ -56,17 +56,29 @@
             <div class="homepage">
                 <center>
                     <h1>Hi, {{username}}<br>
-                    <small> You are <span style="color: #ff0000">${{needs}}</span> dollars away from your goal of <span style="color: #00A400">${{goal}}</span>!</small></h1><hr class="lines">
-                    <div class = "center-block" id="donutchart"></div>
-
-                    <div class="btn-group-1" role="group" aria-label="...">
+                    <small> You have reached your previous goal of <span style="color: #00A400">${{goal}}</span>!</small></h1><hr class="lines">
+                    <h1><small>Please set a new saving goal.</small></h1>
+                    
+                    <form method="get" action="/index" >
+                     <div class="input-group">
+                    <div class="input-group-addon">$</div>
+                    <input type="text" class="input-lg form-control" name="newGoal" id="newGoal" placeholder="Enter New Goal" autocomplete="off">
+                         </div>
+                        <br>
+                      <input type="submit" class="btn btn-default btn-lg box-shadow--16dp" data-loading-text="Editing Goal..." value="Submit" id="newgoalbtn">
+                        
+                    </form>
+                    
+                    <hr class="lines2">
+                    
+                    <!--div class="btn-group-1" role="group" aria-label="...">
                       <form method="get" action="/addCategories" style="display:inline-block;">
                         <button type="submit" class="btn btn-default btn-lg box-shadow--16dp" id="savings-btn">
                             <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add Savings
                         </button>
                       </form>
                     </div>
-                    <hr class="lines2">
+                    <hr class="lines2"-->
                     <td>
                         <div class="btn-group-2" role="group" aria-label="...">
                             <form method="get" action="/stats" style="display:inline-block;">
