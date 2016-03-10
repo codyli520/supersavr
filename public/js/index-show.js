@@ -24,7 +24,13 @@ $( document ).ready(function() {
         var options = {
             pieHole: 0.4,
             legend: {position: 'bottom', 'textStyle': { 'color': 'gray' } },
-            backgroundColor: 'transparent'
+            backgroundColor: 'transparent',
+            is3D: true,
+            slices: {
+            0: { color: 'gold' },
+            1: { color: 'grey' }
+          }
+ 
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
@@ -39,7 +45,7 @@ function validate(evt) {
   var theEvent = evt || window.event;
   var key = theEvent.keyCode || theEvent.which;
   key = String.fromCharCode( key );
-  var regex = /[0-9]|\./;
+  var regex = /[0-9]/;
   if( !regex.test(key) ) {
     theEvent.returnValue = false;
     if(theEvent.preventDefault) theEvent.preventDefault();

@@ -25,8 +25,7 @@ function addItemDetails(e) {
 function addItem(result){
     opened = 1;
     var id = result['id'];
-    var projectHTML = '<img src ="'+result['imageURL']+'" class = "detailsImage" height="100" width="200"></img>'+
-        '<hr>'+
+    var projectHTML = '<hr>'+
         '<a href="'+result['url']+'" class="btn btn-success btn-lg pull-right">Buy</a>'+
         '<button type="button" class = "btn btn-link btn-lg pull-right" onclick="deleteItem('+id+')">Delete</button>'+
         '<div class="clearfix"></div>';

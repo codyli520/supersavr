@@ -39,7 +39,7 @@
                             <button type="submit" class="btn btn-sm white">
                         </form>
                         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        </button> Goal</a>
+                        </button> Goal &amp; Wish List</a>
                         
                     </div>
                 </div>
@@ -58,17 +58,17 @@
 
         <div class="col-xs-12">
             <div class="stats"><center>
-            <h1>Goal Process</h1><hr class="lines3">
-                <h5><b> Goal : ${{goal}}</b></h5>
-                <h5> <b>Current savings: ${{saving}} </b></h5>
+                <h2><b>Goal Process</b></h2>
+                <h4><b> Goal : ${{goal}}</b></h4>
+                <h4> <b>Current savings: ${{saving}} </b></h4>
                <div class="progress">
-                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="{{percentage}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percentage}}%">
+                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="{{percentage}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percentage}}%; color:black; font-weight:bold">
                     <span class="sr-only"></span>
                         {{percentage}}%
                     </div>
 
                 </div>
-                <hr>
+                
                 <td>
                         <div class="btn-group-2" role="group" aria-label="...">
                             <form method="get" action="/editGoal" style="display:inline-block;">
@@ -79,14 +79,15 @@
                 </center>
 
                 </div><hr class="lines3">
+            <hr>
                 <div class="wantedItems">
                     <center>
-                    <h1>Wish List</h1></center><hr class= "lines3">
+                        <h2><b>Wish List</b></h2></center>
                         {{#each item}}
                         <div class="panel panel-default" id="{{id}}">
                           <div class="item">
                               <a href="#">
-                              <h3>{{name}}, ${{price}}</h3>
+                              <h4>{{name}}, ${{price}}</h4>
                               </a>
                             <div class="details hidden"></div>
                           </div>
@@ -98,7 +99,7 @@
               <center>
 
                 <form id="addFriendForm" role="form" method="get" action="/addItem">
-                    <h5><b>Add an Item to your Wish List</b></h5>
+                    <h4><b>Add an Item to your Wish List</b></h4>
                     <div class="form-group">
                       <label for="name">Item Name:</label>
                       <input type="text" class="form-control" id="name" placeholder="Name" name="name">
