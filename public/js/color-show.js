@@ -34,12 +34,21 @@ $(document).ready(function() {
   //'background' : 'linear-gradient(to right,' + rgba + ', ' + rgbaTwo + ')'
 });
 
+   $('html').css({
+  'background' : '-webkit-linear-gradient(100deg,' + bkgdColor + ', ' + blck + ') no-repeat',
+  
+  //'background' : '-moz-linear-gradient(100deg,' + bkgdColor + ', ' + blck + ')',
+  //'background' : '-o-linear-gradient(left,' + rgba + ', ' + rgbaTwo + ')',
+  //'background' : '-ms-linear-gradient(left,' + rgba + ', ' + rgbaTwo + ')',
+  //'background' : 'linear-gradient(to right,' + rgba + ', ' + rgbaTwo + ')'
+});
+
 		//$("body").css({"background": "-webkit-linear-gradient(#000 30%, " + bkgdColor + ")"});
        // $('body').css("background-color","linear-gradient(left, rgba("+bkgdColor+",0.0), rgba("+bkgdColor+",0.2)");
 
 		//$('body').css('background-color', bkgdColor);
 		$('body').css('color', foreColor);
-    $('html').css('background-color', 'transparent');
+    //$('html').css('background-color', 'transparent');
 		//$('.thumbnail').css('background-color', bkgdColor);
 $('.thumbnail').css({
   'background' : '-webkit-linear-gradient(bottom,' + bkgdColor + ', ' + blck + ') no-repeat',
@@ -79,7 +88,11 @@ function doColorStuff(colorData){
   console.log(colors);
 
 $('body').css({
-  'background' : '-webkit-linear-gradient(bottom left,' + colore + ', ' + blck + ')'}); 
+  'background' : '-webkit-linear-gradient(100deg,' + colore + ', ' + blck + ')'
+});
+
+  /*$('html').css({
+  'background' : '-webkit-linear-gradient(bottom left,' + colore + ', ' + blck + ')'}); */
  //$('body').css('background-color', colors[0]);
 $('.thumbnail').css('background-color', colors[1]);
 //$('h1, h2, h3, h4, h5, h5').css('color', colors[2]);

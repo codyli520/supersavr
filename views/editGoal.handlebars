@@ -49,10 +49,10 @@
   <div class="container">
 
       <div class="row">
-  <div class="col-sm-12 text-center">
+  <div class="col-sm-12 text-center" style="text-shadow: 0px 2px 3px #222;">
 
     <h3>Current Goal: $ {{goal}}</h3>
-    <hr>
+    <hr class="lines2">
     <h3>Edit your Goal</h3>
   </div>
 </div>
@@ -62,7 +62,7 @@
      
       <input type="text" class="input-lg form-control" name="newGoal" id="newGoal" placeholder="Enter New Goal" autocomplete="off" onkeypress='validate(event)'required>
       
-      <input type="submit" class="col-xs-12 btn btn-primary btn-load btn-lg top-buffer" data-loading-text="Editing Goal..." value="Edit Goal">
+      <input type="submit" id = "editGoalBtn"class="col-xs-12 btn btn-default btn-load btn-lg top-buffer box-shadow--8dp" data-loading-text="Editing Goal..." value="Edit Goal">
       
     </form>
 
@@ -75,8 +75,9 @@
       </div>   
     <!--</div><!--row2-->
 
-<hr>
+<hr class="lines2">
 
   </div><!--container-->
+  <script src="js/color-show.js"></script>
 </body>
 </html>
