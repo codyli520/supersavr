@@ -22,7 +22,11 @@ $(document).ready(function() {
 	if (clicked)
 	{
 		$('body').css({
-  'background' : '-webkit-linear-gradient(100deg,' + bkgdColor + ', ' + blck + ') no-repeat',
+  'background' : '-webkit-linear-gradient(100deg,' + bkgdColor + ', ' + blck + ') no-repeat center center fixed',
+            '-webkit-background-size': 'cover',
+        '-moz-background-size': 'cover',
+        '-o-background-size': 'cover',
+        'background-size': 'cover'
   
   //'background' : '-moz-linear-gradient(100deg,' + bkgdColor + ', ' + blck + ')',
   //'background' : '-o-linear-gradient(left,' + rgba + ', ' + rgbaTwo + ')',

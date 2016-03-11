@@ -36,7 +36,6 @@ var palette = require('./routes/palette');
 
 // Example route
 // var user = require('./routes/user');
-
 var app = express();
 
 // all environments
